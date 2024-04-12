@@ -1,0 +1,355 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header-bar {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.logo-text {
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.search-area {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 12px 20px; /* Increased padding */
+    border-radius: 25px; /* More rounded corners */
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-button {
+    padding: 12px 25px; /* Increased padding */
+    border-radius: 25px; /* More rounded corners */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.search-input:focus,
+.search-button:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; /* Padding for each navigation item */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+    color: #fff; /* Adjusted text color */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-right: 10px;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.content {
+    display: flex;
+}
+
+.expenses-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Gap between items */
+    padding: 20px;
+    justify-content: center;
+    flex-direction: column; 
+    height: 100%;
+
+}
+
+.sidebar {
+	flex-grow: 1; /* Added to make it fill the remaining space */
+    width: 200px;
+    padding: 20px;
+    display: flex; /* Make the side bar a flex container */
+    flex-direction: column; /* Align items vertically */
+    justify-content: space-between; /* Space evenly between items */
+    height: calc(100vh - 80px); /* Adjusted to account for header's height */
+}
+
+.expenses-filter {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+	max-height: 15%;
+    white-space: nowrap;
+}
+.expenses-filter label, .expenses-filter select, .expenses-filter input[type="date"] {
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add margin bottom to create space between elements */
+}
+
+.expenses-filter select, .expenses-filter input[type="date"] {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.expenses-filter button {
+    margin-right: 10px; /* Added margin between buttons */
+	margin-bottom: 10px; /* Add margin bottom to create space between elements */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.expenses-filter button:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+}
+
+.expenses-filter button:hover {
+    background-color: #45a049;
+}
+.expenses-list {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    align-content: start;
+    height: auto;
+}
+
+.expenses-filter,
+.expenses-list {
+    flex: 1 1 50%; /* Equal width for both */
+}
+
+.expense-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.expense-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Make labels bold */
+}
+
+.expense-box input[type="text"],
+.expense-box input[type="number"],
+.expense-box select {
+    width: calc(100% - 10px); /* Adjusted width to fit the container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Add space between inputs */
+}
+
+.expense-box select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.expense-box button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.expense-box button{
+	background-color: #4CAF50;
+	font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.add-expense-box,
+.recent-expenses-box {
+    width: 100%; /* Take up full width of the sidebar */
+}
+
+.add-expense-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-expense-box h2 {
+    margin-bottom: 20px;
+}
+
+.add-expense-box button{
+	background-color: #4CAF50;
+	font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-group select {
+    appearance: none; /* Remove default arrow on select */
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none; /* Firefox */
+}
+
+.button-group {
+    margin-top: 15px;
+}
+
+.button-group button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    background-color: #45a049;
+}
+
+
+.recent-expenses-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.recent-expenses-box h2 {
+    margin-bottom: 20px;
+}
+
+.recent-expenses-box .expense-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Adjusted to occupy full width */
+    flex-shrink: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjusted to occupy full width */
+}
+.footer-content p {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #f0f0f0;
+}
